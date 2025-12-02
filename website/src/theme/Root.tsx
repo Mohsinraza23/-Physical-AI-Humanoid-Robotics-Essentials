@@ -30,10 +30,10 @@ export default function Root({ children }: RootProps): JSX.Element {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/api/query', {
+      const response = await fetch('/api/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question, top_k: 5 }),
+        body: JSON.stringify({ question }),
       });
 
       if (!response.ok) {
