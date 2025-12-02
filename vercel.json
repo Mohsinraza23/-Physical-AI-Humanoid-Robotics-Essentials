@@ -2,5 +2,11 @@
   "buildCommand": "cd website && npm install && npm run build",
   "outputDirectory": "website/build",
   "framework": "docusaurus",
-  "installCommand": "cd website && npm install"
+  "installCommand": "cd website && npm install",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    }
+  ]
 }
