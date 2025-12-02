@@ -9,11 +9,11 @@ from typing import List
 
 app = FastAPI(title="Physical AI Textbook API (Mock)")
 
-# Enable CORS
+# Enable CORS - allow all origins for deployment
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_credentials=True,
+    allow_origins=["*"],  # Allow all origins (change to specific domain in production)
+    allow_credentials=False,  # Set to False when using wildcard origins
     allow_methods=["*"],
     allow_headers=["*"],
 )
