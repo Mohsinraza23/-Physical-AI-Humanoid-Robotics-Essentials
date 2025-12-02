@@ -56,7 +56,7 @@ export default function Root({ children }: RootProps): JSX.Element {
         ...prev,
         {
           role: 'assistant' as const,
-          content: 'Sorry, the chatbot backend is not running. Please start the backend server.',
+          content: '🚀 The AI chatbot is coming soon! We\'re working on deploying the backend server to make this feature fully functional. In the meantime, feel free to explore all 6 chapters of the Physical AI & Humanoid Robotics textbook. Thank you for your patience!',
           timestamp: new Date(),
         },
       ]);
