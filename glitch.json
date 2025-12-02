@@ -1,0 +1,9 @@
+{
+  "install": "cd backend && pip3 install fastapi uvicorn pydantic",
+  "start": "cd backend && python3 simple_server.py",
+  "watch": {
+    "ignore": [
+      "\\.pyc$"
+    ]
+  }
+}
