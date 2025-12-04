@@ -527,3 +527,293 @@ h2[style*="text-align: center"] {
     display: none !important;
   }
 }
+
+/* ============================================
+   ULTRA MODERN UI - OVERWRITES ALL PREVIOUS
+   ============================================ */
+
+/* STUNNING GRADIENT HERO */
+.hero--primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
+  min-height: 65vh !important;
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.hero--primary::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 200% !important;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px) !important;
+  background-size: 50px 50px !important;
+  animation: slide 20s linear infinite !important;
+}
+
+@keyframes slide {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+.hero__title {
+  font-size: 4.5rem !important;
+  font-weight: 900 !important;
+  text-shadow: 0 5px 30px rgba(0,0,0,0.4) !important;
+  letter-spacing: -3px !important;
+  animation: fadeInScale 1s ease-out !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.hero__subtitle {
+  font-size: 2rem !important;
+  font-weight: 300 !important;
+  margin-top: 1.5rem !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.button--secondary {
+  background: white !important;
+  color: #667eea !important;
+  font-size: 1.3rem !important;
+  padding: 1.2rem 3.5rem !important;
+  border-radius: 50px !important;
+  font-weight: 800 !important;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.4) !important;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  animation: bounceIn 1s ease-out 0.6s both !important;
+  position: relative !important;
+  z-index: 2 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.button--secondary:hover {
+  transform: scale(1.15) translateY(-8px) rotate(2deg) !important;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.6) !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0ff 100%) !important;
+}
+
+/* GORGEOUS 3D CARDS */
+.card {
+  background: white !important;
+  border: none !important;
+  border-radius: 25px !important;
+  overflow: hidden !important;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.12) !important;
+  transform-style: preserve-3d !important;
+  position: relative !important;
+}
+
+.card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.6s !important;
+}
+
+.card:hover::before {
+  opacity: 1 !important;
+}
+
+.card:hover {
+  transform: translateY(-20px) scale(1.03) rotateX(5deg) !important;
+  box-shadow: 0 30px 80px rgba(102, 126, 234, 0.5) !important;
+}
+
+.card__header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  padding: 2.5rem !important;
+  font-size: 2.2rem !important;
+  color: white !important;
+  font-weight: 900 !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.card__header::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 100px !important;
+  height: 100px !important;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent) !important;
+  transform: translate(-50%, -50%) scale(0) !important;
+  transition: transform 0.6s !important;
+}
+
+.card:hover .card__header::after {
+  transform: translate(-50%, -50%) scale(6) !important;
+}
+
+.card__body {
+  padding: 2.5rem !important;
+  min-height: 200px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #faf9ff 100%) !important;
+}
+
+.card__body strong {
+  font-size: 1.6rem !important;
+  color: #667eea !important;
+  display: block !important;
+  margin-bottom: 1.2rem !important;
+  font-weight: 800 !important;
+}
+
+.card__footer {
+  padding: 2rem 2.5rem !important;
+  background: rgba(102, 126, 234, 0.08) !important;
+}
+
+.card__footer a {
+  color: #667eea !important;
+  font-weight: 800 !important;
+  font-size: 1.2rem !important;
+  text-decoration: none !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.card__footer a::after {
+  content: '→' !important;
+  margin-left: 8px !important;
+  transition: margin-left 0.4s ease !important;
+}
+
+.card__footer a:hover {
+  color: #764ba2 !important;
+}
+
+.card__footer a:hover::after {
+  margin-left: 15px !important;
+}
+
+/* GLOWING PULSING CHATBOT */
+.chatbot-icon {
+  position: fixed !important;
+  bottom: 35px !important;
+  right: 35px !important;
+  width: 75px !important;
+  height: 75px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 15px 50px rgba(102, 126, 234, 0.7),
+              0 0 0 0 rgba(102, 126, 234, 0.9) !important;
+  animation: pulse-ring 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite !important;
+  z-index: 99999 !important;
+  border: 4px solid white !important;
+  cursor: pointer !important;
+  transition: all 0.4s ease !important;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.7),
+                0 0 0 0 rgba(102, 126, 234, 0.9);
+  }
+  50% {
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.9),
+                0 0 0 30px rgba(102, 126, 234, 0);
+  }
+  100% {
+    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.7),
+                0 0 0 0 rgba(102, 126, 234, 0);
+  }
+}
+
+.chatbot-icon:hover {
+  transform: scale(1.25) rotate(15deg) !important;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.9) !important;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 996px) {
+  .hero__title {
+    font-size: 3rem !important;
+  }
+
+  .hero__subtitle {
+    font-size: 1.5rem !important;
+  }
+
+  .button--secondary {
+    font-size: 1.1rem !important;
+    padding: 1rem 2.5rem !important;
+  }
+
+  .card__header {
+    font-size: 1.8rem !important;
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__title {
+    font-size: 2.2rem !important;
+    letter-spacing: -1px !important;
+  }
+
+  .hero__subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  .button--secondary {
+    font-size: 1rem !important;
+    padding: 0.9rem 2rem !important;
+  }
+
+  .card__header {
+    font-size: 1.5rem !important;
+    padding: 1.5rem !important;
+  }
+
+  .chatbot-icon {
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 25px !important;
+    right: 25px !important;
+  }
+}
