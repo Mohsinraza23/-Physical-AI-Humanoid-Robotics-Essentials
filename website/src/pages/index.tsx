@@ -48,6 +48,7 @@ export default function Home(): ReactNode {
               <div className="col col--4">
                 <div className="card margin-bottom--lg">
                   <div className="card__header">
+                    <div style={{fontSize: '3rem', marginBottom: '0.5rem'}}>🧠</div>
                     <h3>Chapter 1</h3>
                   </div>
                   <div className="card__body">
@@ -62,6 +63,7 @@ export default function Home(): ReactNode {
               <div className="col col--4">
                 <div className="card margin-bottom--lg">
                   <div className="card__header">
+                    <div style={{fontSize: '3rem', marginBottom: '0.5rem'}}>🤖</div>
                     <h3>Chapter 2</h3>
                   </div>
                   <div className="card__body">
@@ -76,6 +78,7 @@ export default function Home(): ReactNode {
               <div className="col col--4">
                 <div className="card margin-bottom--lg">
                   <div className="card__header">
+                    <div style={{fontSize: '3rem', marginBottom: '0.5rem'}}>⚙️</div>
                     <h3>Chapter 3</h3>
                   </div>
                   <div className="card__body">
@@ -92,6 +95,7 @@ export default function Home(): ReactNode {
               <div className="col col--4">
                 <div className="card margin-bottom--lg">
                   <div className="card__header">
+                    <div style={{fontSize: '3rem', marginBottom: '0.5rem'}}>🌐</div>
                     <h3>Chapter 4</h3>
                   </div>
                   <div className="card__body">
@@ -106,6 +110,7 @@ export default function Home(): ReactNode {
               <div className="col col--4">
                 <div className="card margin-bottom--lg">
                   <div className="card__header">
+                    <div style={{fontSize: '3rem', marginBottom: '0.5rem'}}>👁️</div>
                     <h3>Chapter 5</h3>
                   </div>
                   <div className="card__body">
@@ -120,6 +125,7 @@ export default function Home(): ReactNode {
               <div className="col col--4">
                 <div className="card margin-bottom--lg">
                   <div className="card__header">
+                    <div style={{fontSize: '3rem', marginBottom: '0.5rem'}}>🎓</div>
                     <h3>Chapter 6</h3>
                   </div>
                   <div className="card__body">

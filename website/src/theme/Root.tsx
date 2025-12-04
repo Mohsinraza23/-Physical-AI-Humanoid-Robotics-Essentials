@@ -30,17 +30,23 @@ export default function Root({ children }: RootProps): JSX.Element {
     setIsLoading(true);
 
     try {
+      console.log('Sending question to API:', question);
       const response = await fetch('/api/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question }),
       });
 
+      console.log('API response status:', response.status);
+
       if (!response.ok) {
-        throw new Error('Failed to get response');
+        const errorText = await response.text();
+        console.error('API error response:', errorText);
+        throw new Error(`API error: ${response.status} - ${errorText}`);
       }
 
       const data = await response.json();
+      console.log('API response data:', data);
 
       setMessages((prev) => [
         ...prev,
@@ -52,11 +58,13 @@ export default function Root({ children }: RootProps): JSX.Element {
         },
       ]);
     } catch (err) {
+      console.error('Chatbot error:', err);
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
       setMessages((prev) => [
         ...prev,
         {
           role: 'assistant' as const,
-          content: '🚀 The AI chatbot is coming soon! We\'re working on deploying the backend server to make this feature fully functional. In the meantime, feel free to explore all 6 chapters of the Physical AI & Humanoid Robotics textbook. Thank you for your patience!',
+          content: `❌ **Error**: ${errorMessage}\n\nPlease check the browser console for details, or try asking another question.`,
           timestamp: new Date(),
         },
       ]);
